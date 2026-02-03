@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Howard Kleger | Brandon Joyce Archive</title>
+        <link rel="stylesheet" href="../style/style.css">
+        <style>
+                .bio-section {
+                        background-color: #fff;
+                        padding: var(--spacing-md);
+                        border-radius: 8px;
+                        border: 1px solid var(--color-border);
+                        margin-bottom: var(--spacing-md);
+                }
+
+                .bio-header {
+                        display: flex;
+                        gap: var(--spacing-md);
+                        margin-bottom: var(--spacing-md);
+                }
+
+                .bio-text {
+                        flex: 1;
+                }
+
+                .bio-image img {
+                        max-width: 250px;
+                        border-radius: 4px;
+                }
+
+                @media (max-width: 768px) {
+                        .bio-header {
+                                flex-direction: column;
+                        }
+
+                        .bio-image img {
+                                width: 100%;
+                                max-width: 100%;
+                        }
+                }
+        </style>
+</head>
+
+<body>
+
+        <header>
+                <div class="header-inner">
+                        <a href="../index.html" class="logo">Brandon Joyce</a>
+                        <nav>
+                                <ul>
+                                        <li><a href="../index.html">Home</a></li>
+                                        <li><a href="howard.html" class="active">Howard Kleger</a></li>
+                                        <li><a href="appearances.html">Press</a></li>
+                                        <li><a href="events.html">Events</a></li>
+                                        <li><a href="photoalbum.html">Gallery</a></li>
+                                </ul>
+                        </nav>
+                </div>
+        </header>
+
+        <main class="container grid-section">
+                <h1>Howard Kleger</h1>
+
+                <section class="bio-section">
+                        <div class="bio-header">
+                                <div class="bio-image">
+                                        <img src="../images/daveturban.jpg" alt="Howard Kleger">
+                                </div>
+                                <div class="bio-text">
+                                        <h2>Unauthorized Information Center</h2>
+                                        <p>This cache serves as an unauthorized information center on Howard Kleger, a
+                                                Philadelphian man-of-ideas and significant figure for the Philadelphia
+                                                Institute for Advanced Study.</p>
+                                        <p>Howard is a friend and collaborator. This archive attempts to do justice to
+                                                his methods, projects, products, and ideas, albeit without his rigorous
+                                                oversight.</p>
+                                </div>
+                        </div>
+
+                        <h3>Related Materials</h3>
+                        <ul style="list-style-position: inside; margin-top: 1rem; line-height: 2;">
+                                <li><a href="diagrams.html"><strong>Diagrams by Howard Kleger</strong> (Selected
+                                                Works)</a></li>
+                                <li><a href="../images/howardfinal.pdf">Interview with Howard Kleger (Loyal Magazine) -
+                                                PDF</a></li>
+                                <!-- Linking to external if it was external, or internal if mapped. Original links were mix. Keeping text representation. -->
+                                <li><a href="#">Howard Kleger Solo Show (Philadelphia Institute for Advanced Study)</a>
+                                </li>
+                                <li><a href="#">The Klegatorium (Deluxe Noise)</a></li>
+                                <li><a href="#">Howard Kleger and Hypermeaning</a></li>
+                        </ul>
+                </section>
+
+        </main>
+
+        <footer>
+                <div class="container">
+                        <p>&copy; 2026 Brandon Joyce / Life Action Revival. All rights reserved.</p>
+                </div>
+        </footer>
+
+</body>
+
+</html>
