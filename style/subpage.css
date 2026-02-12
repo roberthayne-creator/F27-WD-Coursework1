@@ -1,0 +1,121 @@
+/* Styles extracted from subpage HTML files
+   This file centralizes page-specific CSS that was previously embedded
+   in individual HTML files. It complements style.css (the project-wide CSS).
+*/
+
+/* Contact page styles */
+.contact-card {
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: var(--spacing-md);
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.contact-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    align-items: start;
+}
+
+.contact-field {
+    flex: 1 1 220px;
+    display: flex;
+    flex-direction: column;
+}
+
+label { font-weight: 600; margin-bottom: 0.5rem; font-size: 0.95rem; }
+input, textarea {
+    padding: 0.625rem 0.75rem;
+    border: 1px solid #d6d6d6;
+    border-radius: 6px;
+    background: #fff;
+    transition: box-shadow 0.15s ease, border-color 0.15s ease;
+    width: 100%;
+    font-size: 0.95rem;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #9fbef8;
+    box-shadow: 0 0 0 3px rgba(159,190,248,0.12);
+}
+
+textarea { min-height: 140px; resize: vertical; }
+
+.btn-send {
+    margin-top: 0.5rem;
+    display: inline-block;
+    background: var(--color-accent);
+    color: #fff;
+    padding: 0.6rem 1.1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+.btn-send:hover { transform: translateY(-1px); box-shadow: 0 6px 14px rgba(0,0,0,0.08); }
+
+.socials { display:flex; gap:1rem; margin-top:1rem; align-items:center; }
+.note { color: var(--color-muted); margin-top: .5rem; text-align:center; }
+.note .lang { display:inline-block; margin: 0 0.75rem; }
+
+.result { margin-top: 1rem; display: none; background: #e6f7ea; color: #0b5a2b; border: 1px solid #bfe6c8; padding: 0.75rem 1rem; border-radius: 6px; }
+
+@media (max-width: 720px) {
+    .contact-row { display: block; }
+    .contact-card { padding: 18px; }
+    .note .lang { display:block; margin: 0.2rem 0; }
+}
+
+/* Howard page styles */
+.bio-section {
+    background-color: #fff;
+    padding: var(--spacing-md);
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    margin-bottom: var(--spacing-md);
+}
+.bio-header { display: flex; gap: var(--spacing-md); margin-bottom: var(--spacing-md); }
+.bio-text { flex: 1; }
+.bio-image img { max-width: 250px; border-radius: 4px; }
+@media (max-width: 768px) {
+    .bio-header { flex-direction: column; }
+    .bio-image img { width: 100%; max-width: 100%; }
+}
+
+/* Utilities used by multiple pages */
+.mt-1 { margin-top: 1rem; }
+.mb-md { margin-bottom: var(--spacing-md); }
+.text-muted { color: var(--color-muted); }
+.list-inside { list-style-position: inside; margin-top: 1rem; line-height: 2; }
+.badge-events { color: black; background-color: #a0ffff; }
+
+/* Linx / legacy absolute-position helpers (preserved as classes)
+   These replace older inline/embedded rules so the layout remains similar
+   while keeping styles externalized. */
+.main-legacy { position:absolute; top:150px; left:20px; font-family: trebuchet, sans-serif; font-size: 90%; color: #330022; border-style: double; border-width: 10px; padding: 10px; letter-spacing: -1px; }
+.atlantis { position: absolute; top: 200px; left: 260px; }
+.cool { position: absolute; top: 10px; left: 220px; }
+.forget { position: absolute; top: 70px; left: 570px; }
+.soda { position: absolute; top: 80px; left: 280px; }
+
+/* Schematics small styles (from schema.html) */
+body.schematics { font-family: Georgia, serif; }
+nav.small ul { list-style-type: none; padding: 0; }
+nav.small ul li { display: inline; margin-right: 10px; }
+
+/* Small helper for legacy absolute link lists */
+.leftarrow { position: absolute; font-size: 80%; top: 200px; left: 20px; width: 500px; background-color: #dddddd; }
+.rightarrow { position: absolute; top: 150px; left: 520px; width: 600px; }
+.conceptual2 { position: absolute; top: 490px; left: 345px; }
+.conceptual { position: absolute; top: 520px; left: 450px; }
+
+/* small print tweaks used by several legacy pages */
+@media (max-width: 700px) {
+    .leftarrow, .rightarrow, .conceptual, .conceptual2 { position: static; width: auto; }
+}
